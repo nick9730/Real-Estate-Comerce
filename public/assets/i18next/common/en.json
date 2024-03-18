@@ -1,0 +1,26 @@
+{
+    "address": "Address",
+    "number" : "Mobile Number",
+    "map"    : "View Map",
+    "listing":"View Listings",
+    "sale" : "FOR SALE",
+    "notfound" : "Maybe we dont have the page that you are looking for.",
+    "back" : "Go Home",
+    "titleRegion" : "REGIONS",
+    "details" : "Details",
+    "required" : "The field  is required ",
+    "forsale": "for sale",
+    "hasSent" : "Your message has sent",
+    "notSent": "Your message has not sent",
+    "showing": "Showing",
+    "to" : "to",
+    "of": "of",
+    "results" : "results"
+  
+
+
+
+
+
+
+}
