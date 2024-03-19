@@ -12,7 +12,7 @@ flex-wrap: wrap;
 overflow: visible;
 margin-top: 10px;
 margin-left: 20px;
-background-image: url('./public/assets//images/lol.png');
+background-image: url('./lol.png');
 background-repeat: no-repeat;
 
 
