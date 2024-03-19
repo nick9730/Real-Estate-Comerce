@@ -18,11 +18,7 @@ export  function useGetVideos(){
     }
 
   })
-  queryClient.prefetchQuery(
-    {
-        queryKey:['videos']
-    }
-)
+
 
   return {data,isLoading}
 
