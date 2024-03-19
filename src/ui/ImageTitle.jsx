@@ -14,7 +14,7 @@ ${({image}) =>
 
  image && `
   
-background-image: url(../public/${image});
+background-image: url(./${image});
 
  `
 }
