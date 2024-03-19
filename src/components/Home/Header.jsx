@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next'
 import MotionText from '../../ui/MotionText'
 import MotionTextTest from '../../ui/MotionTextTest'
 import StyledNavLink from '../../ui/StyledNavLink'
+import video from '../../../public/videos/home.mp4'
 
 
 const Content = styled.header`
@@ -53,7 +54,7 @@ export default function Header() {
       
 <Content>
     
-        <Video  src='../images/video5.mp4' loop autoPlay muted />
+        <Video  src={video} loop autoPlay muted />
 
     <TextTitle >
 

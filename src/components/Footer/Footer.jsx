@@ -6,6 +6,7 @@ import ContactInfos from './ContactInfos'
 import Copyrights from './Copyrights'
 import SocialMediaIcons from './SocialMediaIcons'
 import { useTranslation } from 'react-i18next'
+import video from '../../../public/videos/footer.mp4'
 import Box from './Box'
 
 
@@ -65,7 +66,7 @@ export default function Footer() {
   return (
   <FooterContent>
       <Section>
-        <Video autoPlay muted loop src='../images/video6.mp4' />
+        <Video autoPlay muted loop src={video} />
         <Box/>
         </Section>
  
