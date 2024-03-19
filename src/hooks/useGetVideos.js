@@ -10,7 +10,7 @@ export  function useGetVideos(){
   const {data,isLoading} = useQuery({
     queryKey: ['videos'],
     queryFn:getVideos,
-    onSuccess:()=>
+    onSettle:()=>
     {
         queryClient.invalidateQueries({
             queryKey:['videos']

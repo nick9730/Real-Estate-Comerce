@@ -6,14 +6,12 @@ import {motion} from 'framer-motion'
 import { useModalContext } from '../components/context/ModalContext';
 import { useDetectWidth } from '../hooks/useDetectWidth';
 
-import Sidebar from './Sidebar'
+
 import Modal from '../components/NavBars/Mobile/MobileNavbar';
-import Footer from '../components/Footer/Footer';
 import Transition from './Transition';
-import { useDetectHeight } from '../hooks/useDetectHeight';
 import ScrollToTop from './ScrollToTop';
-import { useGetProperties } from '../components/Listing/useGetProperties';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import { useGetVideos } from '../hooks/useGetVideos';
 
 const Content = styled(motion.div)`   
   width: auto;
@@ -28,7 +26,7 @@ const Content = styled(motion.div)`
 export default function Applayout() {
 
   const {showModal,setWidth,filterModal,mapModal,height,setHeight} =useModalContext(); 
-  const {isLoading} = useGetProperties()
+  const {isLoading} = useGetVideos()
    
    useDetectWidth(setWidth)
 
