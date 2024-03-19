@@ -64,7 +64,7 @@ export default function GetDirections() {
 
   return (
     <Content>
-        <Img src='../images/aboutus1.jpg' alt='aboutus2' />
+        <Img src='./aboutus1.jpg' alt='aboutus2' />
        <Direction>
         <p>{t('visitus')}</p>
         <P type='direction'>{t('address')}</P>

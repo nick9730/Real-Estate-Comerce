@@ -19,7 +19,7 @@ export default function AgentImage() {
      initial={{opacity:0,x:-200}}
      whileInView={{x:0,opacity:1}}
      transition={{duration:2,delay:1}}
-     src='./images/aboutus.jpg'
+     src='./aboutus.jpg'
      alt='aboutus' />
 
   )
