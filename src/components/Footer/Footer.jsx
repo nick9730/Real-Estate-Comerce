@@ -8,6 +8,7 @@ import SocialMediaIcons from './SocialMediaIcons'
 import { useTranslation } from 'react-i18next'
 
 import Box from './Box'
+import { useGetVideos } from '../../hooks/useGetVideos'
 
 
 
@@ -61,12 +62,15 @@ gap: 50px;
 
 
 export default function Footer() {
+  
+  const {data,isLoading} = useGetVideos();
 
+  if (isLoading) return
 
   return (
   <FooterContent>
       <Section>
-        <Video autoPlay muted loop src={'../footer.mp4'} type="video/mp4" />
+        <Video autoPlay muted loop src={data[1]?.video} type="video/mp4" />
         <Box/>
         </Section>
  

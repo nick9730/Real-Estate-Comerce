@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next'
 import MotionText from '../../ui/MotionText'
 import MotionTextTest from '../../ui/MotionTextTest'
 import StyledNavLink from '../../ui/StyledNavLink'
+import {useGetVideos} from '../../hooks/useGetVideos'
 
 
 const Content = styled.header`
@@ -47,13 +48,16 @@ export default function Header() {
 
 
   const {t,i18n}=useTranslation(["home","caption,smallcaption,button"]);
+  const {data,isLoading} = useGetVideos();
 
-
+  if (isLoading) return
+  
+  
   return (
       
 <Content>
     
-        <Video  src={'./home.mp4'} loop autoPlay muted  type="video/mp4"/>
+        <Video  src={data[0]?.video} loop autoPlay muted  type="video/mp4"/>
 
     <TextTitle >
 
