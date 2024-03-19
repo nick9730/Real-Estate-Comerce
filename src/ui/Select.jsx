@@ -119,14 +119,10 @@ StyledSelect.defaultProps= {
 }
 
 
-const  Select = ({options,handler,valuee,type,style}) =>{
-
-
-            
-
+const  Select = ({defaultValue,options,handler,valuee,type,style}) =>{
 
   return (
-    <StyledSelect style={style} number={valuee}  type={type} value={valuee}  onChange={handler} >
+    <StyledSelect defaultValue={defaultValue}  style={style} number={valuee}  type={type} value={valuee}  onChange={handler} >
 {options.map((option)=>(
     <StyledOption key={option?.value} value={option?.value}>
         {option.label}

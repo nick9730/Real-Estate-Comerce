@@ -13,7 +13,7 @@ import Transition from './Transition';
 import { useDetectHeight } from '../hooks/useDetectHeight';
 import ScrollToTop from './ScrollToTop';
 import { useGetProperties } from '../components/Listing/useGetProperties';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const Content = styled(motion.div)`   
   width: auto;
