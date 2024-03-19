@@ -66,7 +66,7 @@ export default function Footer() {
   return (
   <FooterContent>
       <Section>
-        <Video autoPlay muted loop src={'../footer.mp4'} />
+        <Video autoPlay muted loop src={'../footer.mp4'} type="video/mp4" />
         <Box/>
         </Section>
  

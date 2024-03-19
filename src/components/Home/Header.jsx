@@ -53,7 +53,7 @@ export default function Header() {
       
 <Content>
     
-        <Video  src={'./home.mp4'} loop autoPlay muted />
+        <Video  src={'./home.mp4'} loop autoPlay muted  type="video/mp4"/>
 
     <TextTitle >
 
