@@ -44,6 +44,7 @@ export default function Applayout() {
          { height &&    <Sidebar />  } 
          <Transition content={<Outlet/>} />
         { filterModal || mapModal ||  <Footer/>} 
+        <SpeedInsights />
       </Content>
       }
 
