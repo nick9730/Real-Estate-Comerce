@@ -31,7 +31,7 @@ export default function Applayout() {
   const {isLoading} = useGetProperties()
    
    useDetectWidth(setWidth)
-   useDetectHeight(setHeight)
+
   
  
 
@@ -41,7 +41,7 @@ export default function Applayout() {
       <Content>
         <ScrollToTop/>
          { showModal  && <Modal/>}
-         { height &&    <Sidebar />  } 
+         
          <Transition content={<Outlet/>} />
        
         <SpeedInsights />

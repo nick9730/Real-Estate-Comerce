@@ -5,6 +5,8 @@ import { useLocation,useParams } from 'react-router-dom'
 import useShowTitles from '../hooks/useShowTitles'
 import Footer from '../components/Footer/Footer'
 import { useModalContext } from '../components/context/ModalContext'
+import Sidebar from './Sidebar'
+import { useDetectHeight } from '../hooks/useDetectHeight'
 
 
 
@@ -53,14 +55,15 @@ const Transition = ({content})=>{
    const location = useLocation();
    const {name}=useParams()
    const {titles} = useShowTitles(location,name);
-  const {showModal,setWidth,filterModal,mapModal,height,setHeight} =useModalContext(); 
+   const {showModal,setWidth,filterModal,mapModal,height,setHeight} =useModalContext(); 
+   useDetectHeight(setHeight)
     
 
 
 return(
 
     <>
-    
+    { height &&    <Sidebar />  } 
     {content}
     { filterModal || mapModal ||  <Footer/>} 
       
