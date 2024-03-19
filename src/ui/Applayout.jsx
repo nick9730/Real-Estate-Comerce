@@ -43,7 +43,7 @@ export default function Applayout() {
          { showModal  && <Modal/>}
          { height &&    <Sidebar />  } 
          <Transition content={<Outlet/>} />
-        { filterModal || mapModal ||  <Footer/>} 
+       
         <SpeedInsights />
       </Content>
       }

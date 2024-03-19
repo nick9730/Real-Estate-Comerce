@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { useLocation,useParams } from 'react-router-dom'
 
 import useShowTitles from '../hooks/useShowTitles'
+import Footer from '../components/Footer/Footer'
+import { useModalContext } from '../components/context/ModalContext'
 
 
 
@@ -51,6 +53,7 @@ const Transition = ({content})=>{
    const location = useLocation();
    const {name}=useParams()
    const {titles} = useShowTitles(location,name);
+  const {showModal,setWidth,filterModal,mapModal,height,setHeight} =useModalContext(); 
     
 
 
@@ -59,6 +62,7 @@ return(
     <>
     
     {content}
+    { filterModal || mapModal ||  <Footer/>} 
       
     <SlideIn
     initial={{scaleY:0}}
