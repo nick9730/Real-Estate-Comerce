@@ -25,7 +25,7 @@ const Content = styled(motion.div)`
 
 export default function Applayout() {
 
-  const {showModal,setWidth,filterModal,mapModal,height,setHeight} =useModalContext(); 
+  const {showModal,setWidth} =useModalContext(); 
   const {isLoading} = useGetVideos()
    
    useDetectWidth(setWidth)
