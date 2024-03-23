@@ -7,6 +7,8 @@ import MotionText from "../../ui/MotionText";
 import MotionTextTest from "../../ui/MotionTextTest";
 import StyledNavLink from "../../ui/StyledNavLink";
 import { useGetVideos } from "../../hooks/useGetVideos";
+import { useModalContext } from "../context/ModalContext";
+import { useState } from "react";
 
 const Content = styled.header`
 	height: 100vh;
@@ -35,11 +37,15 @@ const TextTitle = styled.div`
 	color: white;
 `;
 export default function Header() {
+
 	const { t, i18n } = useTranslation([
 		"home",
 		"caption,smallcaption,button",
 	]);
+	const {play} = useModalContext()
+
 	const { data, isLoading } = useGetVideos();
+
 
 	if (isLoading) return;
 
@@ -48,7 +54,8 @@ export default function Header() {
 			<Video
 				src={data[0]?.video}
 				loop
-				autoPlay
+				autoPlay={play}
+				play={false}
 				muted
 				type="video/mp4"
 			/>

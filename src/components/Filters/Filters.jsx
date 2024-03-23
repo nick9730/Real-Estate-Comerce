@@ -18,8 +18,6 @@ import Select from "../../ui/Select";
 import SearchProperty from "./SearchProperty";
 import SortButtons from "./SortButtons";
 import StyledFilters from "../../ui/StyledFilters";
-import Pagination from "../../ui/Pagination";
-import { useGetProperties } from "../Listing/useGetProperties";
 import { useModalContext } from "../context/ModalContext";
 
 export default function Filters({ filter, type, kind }) {

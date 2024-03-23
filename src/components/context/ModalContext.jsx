@@ -1,6 +1,7 @@
 import {
 	createContext,
 	useContext,
+	useEffect,
 	useMemo,
 	useState,
 } from "react";
@@ -17,7 +18,8 @@ export default function Modal({ children }) {
 	const [filterModal, setFilterModal] = useState(false);
 	const [filterValue, SetFilterValue] = useState();
 	const [showModal, setShowModal] = useState(false);
-	const [showTheFilters, setShowTheFilters] = useState(false);
+	const [play,setPlay] = useState(true);
+
 	const [width, setWidth] = useState(
 		document.documentElement.clientWidth
 	);
@@ -66,6 +68,19 @@ export default function Modal({ children }) {
 		[setFilterModal, width]
 	);
 
+
+	useEffect(
+		function(){
+			if(width<=800){
+				setPlay(false)
+			}
+			else{
+				setPlay(true)
+			}
+		},[width,play]
+	)
+console.log(width)
+
 	const ModalRef = useOutsideClick(close);
 
 	return (
@@ -92,15 +107,14 @@ export default function Modal({ children }) {
 				setFullSreen,
 				indexArrow,
 				len,
+				play,
+				setPlay,
 				setLen,
 				setIndexArrow,
 				filterValue,
 				SetFilterValue,
 				showModal,
 				setShowModal,
-
-				showTheFilters,
-				setShowTheFilters,
 			}}
 		>
 			{children}

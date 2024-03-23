@@ -7,6 +7,7 @@ import SocialMediaIcons from "./SocialMediaIcons";
 
 import Box from "./Box";
 import { useGetVideos } from "../../hooks/useGetVideos";
+import { useModalContext } from "../context/ModalContext";
 
 const FooterContent = styled.footer`
 	width: 100%;
@@ -51,6 +52,8 @@ const BoxByArea = styled.div`
 `;
 
 export default function Footer() {
+	
+	const {width}=useModalContext()
 	const { data, isLoading } = useGetVideos();
 
 	if (isLoading) return;
@@ -59,7 +62,7 @@ export default function Footer() {
 		<FooterContent>
 			<Section>
 				<Video
-					autoPlay
+					autoPlay={width<1300 ? false : true}
 					muted
 					loop
 					src={data[1]?.video}
