@@ -52,7 +52,7 @@ const StyledCarouserlArrows = styled.div`
 `;
 
 export default function Carousel() {
-	const { setIndexArrow, indexArrow, setLen, width } =
+	const { setIndexArrow, indexArrow, setLen } =
 		useModalContext();
 	const { data, isLoading } = useGetImages();
 

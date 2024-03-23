@@ -42,7 +42,7 @@ export default function ButtonCarousel({ Images }) {
 			<Button
 				kind="fullscreen"
 				onClick={() => (
-					setFullSreen(true), SetFilterValue(Images)
+					setFullSreen(true), SetFilterValue(Images),window.scrollTo(0,0)
 				)}
 			>
 				<MdOutlineFullscreen />

@@ -23,7 +23,6 @@ export default function ChangeLanguageSelect() {
 	return (
 		<>
 			<Select
-				defaultValue={"en"}
 				type={"translator"}
 				valuee={i18n.language}
 				handler={(e) => HandleChange(e.target.value)}

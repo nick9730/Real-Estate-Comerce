@@ -18,7 +18,7 @@ export default function Modal({ children }) {
 	const [filterModal, setFilterModal] = useState(false);
 	const [filterValue, SetFilterValue] = useState();
 	const [showModal, setShowModal] = useState(false);
-	const [play,setPlay] = useState(true);
+	const [play,setPlay] = useState(null);
 
 	const [width, setWidth] = useState(
 		document.documentElement.clientWidth
@@ -69,7 +69,7 @@ export default function Modal({ children }) {
 	);
 
 
-	useEffect(
+	useMemo(
 		function(){
 			if(width<=800){
 				setPlay(false)
@@ -77,9 +77,8 @@ export default function Modal({ children }) {
 			else{
 				setPlay(true)
 			}
-		},[width,play]
+		},[width]
 	)
-console.log(width)
 
 	const ModalRef = useOutsideClick(close);
 

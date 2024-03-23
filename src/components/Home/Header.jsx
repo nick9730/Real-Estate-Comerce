@@ -8,7 +8,7 @@ import MotionTextTest from "../../ui/MotionTextTest";
 import StyledNavLink from "../../ui/StyledNavLink";
 import { useGetVideos } from "../../hooks/useGetVideos";
 import { useModalContext } from "../context/ModalContext";
-import { useState } from "react";
+
 
 const Content = styled.header`
 	height: 100vh;
@@ -49,16 +49,20 @@ export default function Header() {
 
 	if (isLoading) return;
 
+	
+
 	return (
 		<Content>
-			<Video
+			
+				<Video
 				src={data[0]?.video}
 				loop
 				autoPlay={play}
-				play={false}
 				muted
 				type="video/mp4"
-			/>
+				/>
+
+			
 
 			<TextTitle>
 				<H1 type={"home"}>

@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
-import { RealEState } from "../components/context/Context";
+
 
 import Text from "../components/AboutUs/Text";
 import AgentImage from "../components/AboutUs/AgentImage";
 import AgentInfos from "../components/AboutUs/AgentInfos";
-import Footer from "../components/Footer/Footer";
+
 import GetDirections from "../components/AboutUs/GetDirections";
 import ImageTitle from "../ui/ImageTitle";
 import { motion } from "framer-motion";

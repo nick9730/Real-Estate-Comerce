@@ -27,9 +27,7 @@ const FilterButtonPagination = styled.div`
 `;
 
 export default function ModalButtonFilter() {
-	const { filterModal, setFilterModal, width } =
-		useModalContext();
-	const { count } = useGetProperties();
+	const { filterModal, setFilterModal } = useModalContext();	
 
 	return (
 		<PositionButton>

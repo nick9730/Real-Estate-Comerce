@@ -33,7 +33,7 @@ export default function Filters({ filter, type, kind }) {
 		price,
 		setPrice,
 	} = RealEState();
-	const { width } = useModalContext();
+	
 	const { i18n } = useTranslation();
 
 	return (

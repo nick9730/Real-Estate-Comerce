@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useModalContext } from "../context/ModalContext";
 
-import { RealEState } from "../context/Context";
+
 
 import CarouselItem from "../Carousel/CarouselItem";
 import FullscreenButton from "./FullscreenButton";

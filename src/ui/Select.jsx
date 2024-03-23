@@ -103,7 +103,7 @@ StyledSelect.defaultProps = {
 };
 
 const Select = ({
-	defaultValue,
+	
 	options,
 	handler,
 	valuee,
@@ -112,7 +112,7 @@ const Select = ({
 }) => {
 	return (
 		<StyledSelect
-			defaultValue={defaultValue}
+			
 			style={style}
 			number={valuee}
 			type={type}
