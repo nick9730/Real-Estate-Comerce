@@ -1,37 +1,34 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
-import Select from '../../ui/Select'
+import React from "react";
+import { useTranslation } from "react-i18next";
+import Select from "../../ui/Select";
 
+const Languages = [
+	{
+		value: "en",
+		label: "EN",
+	},
+	{
+		value: "gr",
+		label: "GR",
+	},
+];
 
-const Languages = [ 
-    {
-     value:'en',label:'EN'
-   
-   
-    }  ,
-    {
-     value:'gr',label:'GR'
-    }
-   
-   ]
-   
+export default function ChangeLanguageSelect() {
+	const { i18n } = useTranslation();
 
-export default function ChangeLanguageSelect(){
+	const HandleChange = (lng) => {
+		i18n.changeLanguage(lng);
+	};
 
-    const {i18n} = useTranslation()
-
-    
-    const HandleChange=(lng)=>{
-     
-      i18n.changeLanguage(lng)
-    
-    }
-
-
-  return (
-    <>
-
-        <Select defaultValue={'en'} type={'translator'} valuee={i18n.language}  handler={(e)=>HandleChange(e.target.value)} options={Languages} />
-    </>
-  )
+	return (
+		<>
+			<Select
+				defaultValue={"en"}
+				type={"translator"}
+				valuee={i18n.language}
+				handler={(e) => HandleChange(e.target.value)}
+				options={Languages}
+			/>
+		</>
+	);
 }

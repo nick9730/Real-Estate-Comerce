@@ -1,17 +1,20 @@
 import { useSearchParams } from "react-router-dom";
 
+export default function useSortBy(properties) {
+	let sortedByItems = properties;
+	const [searchParams] = useSearchParams();
 
-export default function useSortBy(properties){
+	const SortParams = searchParams.get("sortby");
 
-    let sortedByItems=properties;
-    const[ searchParams] = useSearchParams();
+	if (SortParams === "increasing")
+		sortedByItems = properties?.sort((a, b) =>
+			a.price < b.price ? 1 : -1
+		);
+	if (SortParams === "decreasing")
+		sortedByItems = properties?.sort((a, b) =>
+			a.price > b.price ? 1 : -1
+		);
+	if (SortParams === "default") sortedByItems = properties;
 
-    const SortParams= searchParams.get('sortby' );
-     
-
-    if(SortParams==='increasing')  sortedByItems=properties?.sort((a,b)=>a.price<b.price ? 1 : -1)
-    if(SortParams==='decreasing')   sortedByItems=properties?.sort((a,b)=>a.price>b.price ? 1 : -1)
-    if(SortParams==='default')  sortedByItems=properties;
-    
-    return {sortedByItems}
+	return { sortedByItems };
 }

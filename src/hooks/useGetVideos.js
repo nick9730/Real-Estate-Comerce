@@ -1,25 +1,21 @@
-
-import {  useQuery,useQueryClient } from "@tanstack/react-query";
+import {
+	useQuery,
+	useQueryClient,
+} from "@tanstack/react-query";
 import { getVideos } from "../servers/apiVideos";
 
-export  function useGetVideos(){
+export function useGetVideos() {
+	const queryClient = useQueryClient();
 
+	const { data, isLoading } = useQuery({
+		queryKey: ["videos"],
+		queryFn: getVideos,
+		onSettle: () => {
+			queryClient.invalidateQueries({
+				queryKey: ["videos"],
+			});
+		},
+	});
 
-  const queryClient = useQueryClient();
-
-  const {data,isLoading} = useQuery({
-    queryKey: ['videos'],
-    queryFn:getVideos,
-    onSettle:()=>
-    {
-        queryClient.invalidateQueries({
-            queryKey:['videos']
-        })
-    }
-
-  })
-
-
-  return {data,isLoading}
-
+	return { data, isLoading };
 }

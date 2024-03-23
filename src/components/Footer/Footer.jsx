@@ -1,95 +1,88 @@
-import React from 'react'
-import styled from 'styled-components'
+import styled from "styled-components";
 
-import FooterAreaList from './FooterAreaList'
-import ContactInfos from './ContactInfos'
-import Copyrights from './Copyrights'
-import SocialMediaIcons from './SocialMediaIcons'
-import { useTranslation } from 'react-i18next'
+import FooterAreaList from "./FooterAreaList";
+import ContactInfos from "./ContactInfos";
+import Copyrights from "./Copyrights";
+import SocialMediaIcons from "./SocialMediaIcons";
 
-import Box from './Box'
-import { useGetVideos } from '../../hooks/useGetVideos'
-
-
-
+import Box from "./Box";
+import { useGetVideos } from "../../hooks/useGetVideos";
 
 const FooterContent = styled.footer`
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: flex-start;
-background-color: black;
-`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	background-color: black;
+`;
 
-const Section = styled.section` 
-  height: 100vh;
-width: 100%;
-border: 0px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-`
+const Section = styled.section`
+	height: 100vh;
+	width: 100%;
+	border: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+`;
 
 const Video = styled.video`
-width:100%;
-height: 100%;
-border: 0px;
-object-fit: cover;
-filter: brightness(100%);
-`
+	width: 100%;
+	height: 100%;
+	border: 0px;
+	object-fit: cover;
+	filter: brightness(100%);
+`;
 
-
-
-
-
-
-const BoxByArea=styled.div`
-  width: 100%;
-  height: 70vh;
-display: flex;
-flex-direction: column;
-gap: 50px;
-@media (min-width: 1200px){
-   height: 39vh;
-   }
-   @media (max-height: 740px){
-   height: 90vh;
-   }
-`
-
+const BoxByArea = styled.div`
+	width: 100%;
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	@media (min-width: 1200px) {
+		height: 39vh;
+	}
+	@media (max-height: 740px) {
+		height: 90vh;
+	}
+`;
 
 export default function Footer() {
-  
-  const {data,isLoading} = useGetVideos();
+	const { data, isLoading } = useGetVideos();
 
-  if (isLoading) return
+	if (isLoading) return;
 
-  return (
-  <FooterContent>
-      <Section>
-        <Video autoPlay muted loop src={data[1]?.video} type="video/mp4" />
-        <Box/>
-        </Section>
- 
-       <BoxByArea>
-         <FooterAreaList/>
-        </BoxByArea>
+	return (
+		<FooterContent>
+			<Section>
+				<Video
+					autoPlay
+					muted
+					loop
+					src={data[1]?.video}
+					type="video/mp4"
+				/>
+				<Box />
+			</Section>
 
-        <BoxByArea>
-          <ContactInfos/>
-          <SocialMediaIcons/>
-        </BoxByArea>
-          <Copyrights/>
-</FooterContent>
-  )
+			<BoxByArea>
+				<FooterAreaList />
+			</BoxByArea>
+
+			<BoxByArea>
+				<ContactInfos />
+				<SocialMediaIcons />
+			</BoxByArea>
+			<Copyrights />
+		</FooterContent>
+	);
 }
 
-
 // <StyledInfoFooter>
-  
+
 // <h4>
 // <storng>
 // About us
@@ -114,7 +107,7 @@ export default function Footer() {
 // <div>
 
 // <ul>
-// <StyleLi>	
+// <StyleLi>
 //     +30 23770 71604
 
 // </StyleLi>
