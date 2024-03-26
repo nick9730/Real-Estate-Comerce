@@ -20,6 +20,11 @@ The user could search the properties with any value such as (price,location,beds
 
 
 
+![image](https://github.com/nick9730/Real-Estate-eCommerce/assets/134779828/542be521-54ab-474c-a51d-91c5397b550a)
+
+
+
+
 
 
 
