@@ -20,7 +20,7 @@ export default function SortButtons({ type, kind, style }) {
 			style={style}
 			type={kind === "modal" ? kind : "form"}
 			valuee={sortBy}
-			options={i18n.language === "en" ? SortBy : GreekSortBy}
+			options={i18n.language === "en" || i18n.language === "en-US" ? SortBy : GreekSortBy}
 			handler={handleFilter}
 		/>
 	);
