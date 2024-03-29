@@ -47,7 +47,7 @@ export default function Filters({ filter, type, kind }) {
 					valuee={baths}
 					handler={(e) => filter(e, setShower, "baths")}
 					options={
-						i18n.language === "en"
+						i18n.language === "en" || i18n.language === "en-US"
 							? BathOptions
 							: GreekBathOptions
 					}
@@ -57,7 +57,7 @@ export default function Filters({ filter, type, kind }) {
 					valuee={beds}
 					handler={(e) => filter(e, setRooms, "beds")}
 					options={
-						i18n.language === "en"
+						i18n.language === "en" || i18n.language === "en-US"
 							? BedOptions
 							: GreekBedOptions
 					}
@@ -66,13 +66,13 @@ export default function Filters({ filter, type, kind }) {
 					type={type}
 					valuee={area}
 					handler={(e) => filter(e, setArea, "area")}
-					options={i18n.language === "en" ? Area : GreekArea}
+					options={i18n.language === "en" || i18n.language === "en-US" ? Area : GreekArea}
 				/>
 				<Select
 					type={type}
 					valuee={place}
 					handler={(e) => filter(e, setNumber, "place")}
-					options={i18n.language === "en" ? Type : GreekType}
+					options={i18n.language === "en" || i18n.language === "en-US" ? Type : GreekType}
 				/>
 			</StyledFilters>
 
@@ -83,12 +83,12 @@ export default function Filters({ filter, type, kind }) {
 					valuee={price}
 					handler={(e) => filter(e, setPrice, "price")}
 					options={
-						i18n.language === "en"
+						i18n.language === "en" || i18n.language === "en-US"
 							? PriceOptionsForSale
 							: GreekPriceOptionsForSale
 					}
 				/>
-				{/* {width >800 &&  <Pagination count={count}/>}      */}
+				
 				<SortButtons
 					style={kind === "modal" ? null : { width: "30%" }}
 					filter={filter}
