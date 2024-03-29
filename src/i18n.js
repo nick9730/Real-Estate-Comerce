@@ -12,7 +12,7 @@ i18n
 			loadPath: "/assets/i18next/{{ns}}/{{lng}}.json",
 		},
 		debug: false,
-		fallbackLng: "en",
+		fallbackLng:"en-US" "en",
 		ns: [
 			"home",
 			"aboutus",
