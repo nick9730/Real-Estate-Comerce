@@ -30,7 +30,7 @@ export default function SearchProperty({ filter }) {
 				onAbort={(e) => filter(e, SetQuery, "region")}
 				value={queryurl}
 				placeholder={
-					i18n.language === "en" ? "Address" : "Διεύθυνση"
+					i18n.language === "en" || i18n.language === "en-US" ? "Address" : "Διεύθυνση"
 				}
 				type="text"
 			/>
